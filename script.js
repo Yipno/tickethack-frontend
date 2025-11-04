@@ -12,7 +12,13 @@ searchBtn.addEventListener("click", () => {
   getTrips(departure, arrival, date);
 });
 
-function getTrips(departure, arrival, date) {
+async function getTrips(departure, arrival, date) {
   console.log(departure, arrival, date);
-  //const trips = await fetch('http://localhost:3000/trips/')
+  const response = await fetch("http://localhost:3000/trips/", {
+    method: "POST",
+    headers: "Content-Type: application/json",
+    body: JSON.stringify({ departure, arrival, date }),
+  });
+  const data = await response.json();
+  return data.result;
 }

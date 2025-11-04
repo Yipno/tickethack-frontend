@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #000000;
+}
+/* ======= HEADER ======= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: white;
+}
+
+.logo {
+  color: #237758;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+.nav a:hover {
+  color: #4aa382;
+}
+
+/* ======= HERO SECTION ======= */
+.hero {
+  background-image: url("images/background.jpg"); 
+  background-size: cover;        
+  background-position: center;   
+  height: 100vh;                
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+   
+  padding: 40px;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.overlay h2 {
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 20px;
+
+}
+
+.overlay p {
+  color: #fffefe;
+  margin-bottom: 40px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+}
+
+.search-box,
+.train-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  width: 280px;
+  text-align: center;
+}
+
+/* Bloc train */
+.train-box img {
+  width: 100px;
+  margin-bottom: 100px;
+}
+
+.train-box p {
+  color: #000000;
+  font-size: 15px;;
+}
+
+/* Champs de formulaire */
+.search-box input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  font-size: 12px;;
+}
+
+#departure {
+  margin-bottom: 0px; 
+}
+
+#arrival {
+  margin-bottom: 30px;
+}
+
+#date {
+  margin-bottom: 50px;
+}
+
+
+/* Bouton vert */
+.search-box button {
+  background-color: #4aa382;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.1s;
+}
+
+.search-box button:hover {
+  background-color: #3b876e;
+}
+
+

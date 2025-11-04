@@ -1,4 +1,4 @@
-console.log("script ok");
+// console.log("script ok");
 
 const departureInput = document.querySelector("#departure");
 const arrivalInput = document.querySelector("#arrival");

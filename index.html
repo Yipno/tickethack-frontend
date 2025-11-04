@@ -3,15 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Projet</title>
+    <title>Tickethack</title>
     <!-- ajouter des liens CSS  -->
+     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- le contenu visible de la page  -->
-    <h1>Bonjour, bienvenue sur ma page !</h1>
-    <p>Ceci est un paragraphe de base.</p>
+     <header>
+      <h1 class="logo">Tickethack</h1>
+      <nav>
+        <a href="#">Cart</a>
+        <a href="#">Bookings</a>
+      </nav>
+    </header>
+     <!-- ===== MAIN CONTENT ===== -->
+    <main>
+      <section class="hero">
+        <div class="overlay">
+          <h2>Explore the world effortlessly by train!</h2>
+          <p>
+            Compare, book and enjoy cheap prices for train tickets: your journey
+            starts on Tickethack.
+          </p>
 
-    <!-- Tu peux ajouter des scripts JS à la fin du body -->
+          <div class="search-container">
+            <div class="search-box">
+              <input type="text" placeholder="Departure" />
+              <input type="text" placeholder="Arrival" />
+              <input type="date" />
+              <button>Search</button>
+            </div>
+
+            <div class="train-box">
+              <img src="images/train.png" alt="train icon" />
+              />
+              <p>It's time to book your future trip.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

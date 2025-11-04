@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tickethack</title>
     <!-- ajouter des liens CSS  -->
-     <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- le contenu visible de la page  -->
-     <header>
+    <header>
       <h1 class="logo">Tickethack</h1>
       <nav class="nav">
         <a href="#">Cart</a>
         <a href="#">Bookings</a>
       </nav>
     </header>
-     <!-- ===== MAIN CONTENT ===== -->
+    <!-- ===== MAIN CONTENT ===== -->
     <main>
       <section class="hero">
         <div class="overlay">
@@ -31,18 +31,23 @@
               <input type="text" id="departure" placeholder="Departure" />
               <input type="text" id="arrival" placeholder="Arrival" />
               <input type="date" id="date" />
-              <button  id="search-btn">Search</button>
+              <button id="search-btn">Search</button>
             </div>
 
             <div class="train-box">
               <img src="images/train.png" alt="train icon" />
+
               <p>It's time to book your future trip.</p>
             </div>
-            
           </div>
         </div>
       </section>
     </main>
+
+    <!-- CDN Moment.js -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/min/moment.min.js"></script>
+    <!-- pour la locale française -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/locale/fr.js"></script>
 
     <script src="script.js"></script>
   </body>

@@ -14,11 +14,13 @@ searchBtn.addEventListener("click", () => {
 
 async function getTrips(departure, arrival, date) {
   console.log(departure, arrival, date);
-  const response = await fetch("http://localhost:3000/trips/", {
-    method: "POST",
-    headers: "Content-Type: application/json",
-    body: JSON.stringify({ departure, arrival, date }),
-  });
+  const response = await fetch(
+    `http://localhost:3000/trips?departure=${departure}&arrival=${arrival}&date${date}`
+  );
   const data = await response.json();
-  return data.result;
+  if (!data.result) {
+    document.querySelector(".train-box > img").src = "./images/notfound.png";
+  } else {
+    console.log("response:", data);
+  }
 }

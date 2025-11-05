@@ -15,7 +15,7 @@ async function getCart() {
     return;
   }
   const trips = data.cart;
-  console.log(trips);
+  // console.log(trips);
   container.innerHTML = "";
   let html = "";
   for (let i = 0; i < trips.length; i++) {
@@ -41,6 +41,7 @@ async function getCart() {
     </div>`;
   getTotal();
   deleteCartItem();
+  purchase();
 }
 
 function getTotal() {
@@ -68,6 +69,16 @@ function deleteCartItem() {
         alert("Cant touch this !");
       }
     });
+  });
+}
+
+function purchase() {
+  const purchaseBtn = document.querySelector("#purchase-btn");
+  purchaseBtn.addEventListener("click", () => {
+    const tripsInCart = document.querySelectorAll(".tripId");
+    const tripsToPurchase = [];
+    tripsInCart.forEach((cart) => tripsToPurchase.push(cart.textContent));
+    console.log("trips:", tripsToPurchase);
   });
 }
 

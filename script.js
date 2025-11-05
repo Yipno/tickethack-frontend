@@ -1,6 +1,8 @@
 // console.log("script ok");
 moment.locale("fr");
 
+//! SCRIPT INDEX
+
 const departureInput = document.querySelector("#departure");
 const arrivalInput = document.querySelector("#arrival");
 const dateInput = document.querySelector("#date");
@@ -54,3 +56,14 @@ function showTrips(trips) {
   }
   document.querySelector(".train-box").innerHTML = html;
 }
+
+function addCart() {
+  const bookBtns = document.querySelectorAll(".book");
+  bookBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      console.log(this.parentNode.innerHTML);
+    });
+  });
+}
+
+//! SCRIPT CART

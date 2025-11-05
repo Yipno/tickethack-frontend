@@ -92,5 +92,3 @@ async function sendTripToDB(id) {
     );
   }
 }
-
-//! SCRIPT CART

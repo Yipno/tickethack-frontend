@@ -7,6 +7,7 @@
 body {
   font-family: Arial, sans-serif;
   color: #000000;
+  height: 100vh;
 }
 /* ======= HEADER ======= */
 header {
@@ -80,59 +81,141 @@ h1 a:visited {
 
 .search-box,
 .train-box {
-  background-color: white;
-  border-radius: 10px;
-  padding: 25px;
-  width: 280px;
-  text-align: center;
+ background-color: white;
+ border-radius: 10px;
+ padding: 25px;
+ width: 420px;
+ text-align: center;
+ overflow:scroll;
+height: 480px;
 }
+
 
 /* Bloc train */
 .train-box img {
-  width: 100px;
-  margin-bottom: 100px;
+ width: 100px;
+ margin-bottom: 100px;
 }
 
+
 .train-box p {
-  color: #000000;
-  font-size: 15px;
+ color: #000000;
+ font-size: 15px;
 }
+
 
 /* Champs de formulaire */
 .search-box input {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #f2f2f2;
-  border-radius: 6px;
-  font-size: 12px;
+ display: block;
+ width: 100%;
+ padding: 10px;
+ background-color: #f2f2f2;
+ border-radius: 6px;
+ font-size: 12px;;
 }
+
 
 #departure {
-  margin-bottom: 0px;
+ margin-bottom: 0px;
 }
+
 
 #arrival {
-  margin-bottom: 30px;
+ margin-bottom: 30px;
 }
 
+
 #date {
-  margin-bottom: 50px;
+ margin-bottom: 50px;
 }
+
+
+
 
 /* Bouton vert */
 .search-box button {
-  background-color: #4aa382;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  width: 100%;
-  transition: background-color 0.1s;
+ background-color: #4aa382;
+ color: white;
+ border: none;
+ padding: 10px;
+ border-radius: 6px;
+ cursor: pointer;
+ font-weight: bold;
+ width: 100%;
+ transition: background-color 0.1s;
 }
 
+
 .search-box button:hover {
-  background-color: #3b876e;
+ background-color: #3b876e;
+}
+
+
+
+
+/* ======= TRAIN BOX ======= */
+
+
+
+
+/* État par défaut (train + texte) */
+
+
+
+
+
+
+/* État résultats */
+.train-results {
+ text-align: left;
+}
+
+
+/* Chaque trajet */
+.trip-selector {
+ background-color: #f8f8f8;
+ border-radius: 8px;
+ padding: 12px 10px;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ margin-bottom: 10px;
+ font-size: 0.95rem;
+}
+
+
+/* Texte du trajet */
+.travelCities {
+ font-weight: 300;
+ color: #333;
+}
+
+
+.horaire {
+ color: #666;
+ margin: 0 8px;
+}
+
+
+.price {
+ font-weight: bold;
+ color: #333;
+ margin-right: 8px;
+}
+
+
+/* Bouton Book */
+.book {
+ background-color: #4aa382;
+ color: white;
+ border: none;
+ padding: 6px 12px;
+ border-radius: 6px;
+ cursor: pointer;
+ transition: background-color 0.3s;
+}
+
+
+.book:hover {
+ background-color: #3b876e;
 }

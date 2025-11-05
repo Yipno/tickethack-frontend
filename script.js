@@ -45,25 +45,52 @@ function showTrips(trips) {
   container.innerHTML = "";
   let html = "";
   for (let i = 0; i < trips.length; i++) {
+    // console.log(trips[i]._id);
     const horaire = moment(trips[i].date).format("LT");
     html += `
         <div class='trip-selector'>
         <p class='travelCities'>${trips[i].departure} > ${trips[i].arrival}</p>
         <p class='horaire'>${horaire}</p>
         <p class='price'>${trips[i].price}€</p>
-        <button class='book'>Book</button>
-        </div>`;
+        <span class='tripId' style='display: none;'>${trips[i]._id}</span>
+        <button class='book'>
+        Book
+            </button>
+            </div>`;
   }
   document.querySelector(".train-box").innerHTML = html;
+  addToCart();
 }
 
-function addCart() {
+// ajoute le clic sur les boutons, au clic sur un ca envoie l'id vers la db carts
+function addToCart() {
   const bookBtns = document.querySelectorAll(".book");
   bookBtns.forEach((btn) => {
     btn.addEventListener("click", function () {
-      console.log(this.parentNode.innerHTML);
+      const tripId = this.parentNode.querySelector(".tripId").textContent;
+      sendTripToDB(tripId);
     });
   });
+}
+
+async function sendTripToDB(id) {
+  if (!id) {
+    alert("Impossible d'ajouter le voyage au panier 'BAD ID'");
+    return;
+  }
+  const data = await fetch("http://localhost:3000/cart/", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ id }),
+  });
+  const result = await data.json();
+  if (result.result) {
+    window.location.assign("./cart.html");
+  } else {
+    alert(
+      "Oups! Something went wrong and at this point I am too afraid to ask"
+    );
+  }
 }
 
 //! SCRIPT CART

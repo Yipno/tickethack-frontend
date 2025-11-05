@@ -34,19 +34,26 @@ header {
   color: #4aa382;
 }
 
+h1 a {
+  text-decoration: none;
+}
+h1 a:visited {
+  color: #237758;
+  text-decoration: none;
+}
+
 /* ======= HERO SECTION ======= */
 .hero {
-  background-image: url("images/background.jpg"); 
-  background-size: cover;        
-  background-position: center;   
-  height: 100vh;                
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .overlay {
-   
   padding: 40px;
   width: 100%;
   height: 100vh;
@@ -57,7 +64,6 @@ header {
   font-size: 30px;
   color: #ffffff;
   margin-bottom: 20px;
-
 }
 
 .overlay p {
@@ -89,7 +95,7 @@ header {
 
 .train-box p {
   color: #000000;
-  font-size: 15px;;
+  font-size: 15px;
 }
 
 /* Champs de formulaire */
@@ -99,11 +105,11 @@ header {
   padding: 10px;
   background-color: #f2f2f2;
   border-radius: 6px;
-  font-size: 12px;;
+  font-size: 12px;
 }
 
 #departure {
-  margin-bottom: 0px; 
+  margin-bottom: 0px;
 }
 
 #arrival {
@@ -113,7 +119,6 @@ header {
 #date {
   margin-bottom: 50px;
 }
-
 
 /* Bouton vert */
 .search-box button {
@@ -131,5 +136,3 @@ header {
 .search-box button:hover {
   background-color: #3b876e;
 }
-
-

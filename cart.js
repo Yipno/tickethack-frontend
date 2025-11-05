@@ -10,12 +10,12 @@ async function getCart() {
   const container = document.querySelector("#cart-container");
   const result = await fetch("http://localhost:3000/cart/");
   const data = await result.json();
-  const trips = data.cart;
-  console.log(trips);
-  if (!trips.result) {
+  if (data.result === false) {
     container.innerHTML = `<p>No tickets in your cart.</p>`;
     return;
   }
+  const trips = data.cart;
+  console.log(trips);
   container.innerHTML = "";
   let html = "";
   for (let i = 0; i < trips.length; i++) {
